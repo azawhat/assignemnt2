@@ -72,5 +72,93 @@ public class MyLinkedList<E> {
         }
         return current.element;
     }
+    public E set(int index, E element) {
+        return null;
+    }
 
+    public void add(int index, E element) {
+
+    }
+
+    public E remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        E removedElement = current.element;
+        if (current == head) {
+            head = current.next;
+            if (head != null) {
+                head.prev = null;
+            } else {
+                tail = null;
+            }
+        } else if (current == tail) {
+            tail = current.prev;
+            tail.next = null;
+        } else {
+            current.prev.next = current.next;
+            current.next.prev = current.prev;
+        }
+        size--;
+        return removedElement;
+    }
+
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    public ListIterator<E> listIterator() {
+        return null;
+    }
+
+    public ListIterator<E> listIterator(int index) {
+        return null;
+    }
+
+    public List<E> subList(int fromIndex, int toIndex) {
+        return null;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return false;
+    }
+
+    public boolean contains(Object o) {
+        return false;
+    }
+
+    public Iterator<E> iterator() {
+        return null;
+    }
+
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    public <T> T[] toArray(T[] a) {
+        return null;
+    }
+
+
+    public static void main(String[] args) {
+        MyLinkedList<Integer> list = new MyLinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        System.out.println(list.get(1)); // should print 2
+        list.remove(1);
+        System.out.println(list.size()); // should print 2
+    }
 }
