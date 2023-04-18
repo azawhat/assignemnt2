@@ -56,4 +56,29 @@ public class MyArrayList<E> {
         System.arraycopy(elements, 0, newElements, 0, size);
         elements = newElements;
     }
+    public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        return (E) elements[index];
+    }
+
+    public E set(int index, E element) {
+        return null;
+    }
+
+    public void add(int index, E element) {
+
+    }
+
+    public E remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        E element = (E) elements[index];
+        System.arraycopy(elements, index + 1, elements, index, size - index - 1);
+        elements[size - 1] = null;
+        size--;
+        return element;
+    }
 }
