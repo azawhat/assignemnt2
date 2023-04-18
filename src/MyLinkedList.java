@@ -22,6 +22,25 @@ public class MyLinkedList<E> {
         tail = null;
         size = 0;
     }
+    public boolean add(E element) {
+        Node newNode = new Node(element, null, tail);
+        if (size == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+        return true;
+    }
 
+    public boolean remove(Object o) {
+        return false;
+    }
+
+    public boolean containsAll(Collection<?> c) {
+        return false;
+    }
 
 }
