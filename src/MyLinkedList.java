@@ -42,5 +42,35 @@ public class MyLinkedList<E> {
     public boolean containsAll(Collection<?> c) {
         return false;
     }
+    public boolean addAll(Collection<? extends E> c) {
+        return false;
+    }
+
+
+    public boolean addAll(int index, Collection<? extends E> c) {
+        return false;
+    }
+
+    public boolean removeAll(Collection<?> c) {
+        return false;
+    }
+
+    public boolean retainAll(Collection<?> c) {
+        return false;
+    }
+
+    public void clear() {
+
+    }
+    public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.element;
+    }
 
 }
