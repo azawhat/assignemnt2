@@ -81,4 +81,59 @@ public class MyArrayList<E> {
         size--;
         return element;
     }
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    public ListIterator<E> listIterator() {
+        return null;
+    }
+
+    public ListIterator<E> listIterator(int index) {
+        return null;
+    }
+
+    public List<E> subList(int fromIndex, int toIndex) {
+        return null;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return false;
+    }
+
+    public boolean contains(Object o) {
+        return false;
+    }
+
+    public Iterator<E> iterator() {
+        return null;
+    }
+
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    public <T> T[] toArray(T[] a) {
+        return null;
+    }
+
+    public static void main(String[] args) {
+        MyArrayList<Integer> list = new MyArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        System.out.println(list.get(1)); // Output: 2
+        System.out.println(list.size()); // Output: 3
+        list.remove(1);
+        System.out.println(list.get(1)); // Output: 3
+        System.out.println(list.size()); // Output: 2
+    }
 }
