@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class MyArrayList<E> {
+public class MyArrayList<E> implements List<E>{
 
     private static final int INITIAL_CAPACITY = 10;
 
