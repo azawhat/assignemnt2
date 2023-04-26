@@ -34,7 +34,19 @@ public class MyLinkedList<E> {
         size++;
         return true;
     }
-
+    public boolean addAll(E element){
+        Node newNode = new Node(element, null, tail);
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            Node current = this.head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+        return true;
+    }
     public boolean remove(Object o) {
         return false;
     }
@@ -42,6 +54,7 @@ public class MyLinkedList<E> {
     public boolean containsAll(Collection<?> c) {
         return false;
     }
+
     public boolean addAll(Collection<? extends E> c) {
         return false;
     }
@@ -157,6 +170,7 @@ public class MyLinkedList<E> {
         list.add(1);
         list.add(2);
         list.add(3);
+        list.addAll(1);
         System.out.println(list.get(1)); // should print 2
         list.remove(1);
         System.out.println(list.size()); // should print 2

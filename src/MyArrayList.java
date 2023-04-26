@@ -23,7 +23,15 @@ public class MyArrayList<E> implements List<E>{
         return true;
     }
 
-
+    public boolean addAll(E element){
+        if (size == elements.length) {
+            resize();
+        }
+        while (elements != null){
+            elements[size] = element;
+        }
+        return true;
+    }
     public boolean remove(Object o) {
         return false;
     }
