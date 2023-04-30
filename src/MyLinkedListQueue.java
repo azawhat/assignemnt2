@@ -18,6 +18,14 @@ public class MyLinkedListQueue<E> {
         return queue.remove(0);
     }
 
+    public E peek(){
+        if(isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return queue.get(0);
+    }
+
+
 
     public boolean isEmpty(){
         return queue.isEmpty();
