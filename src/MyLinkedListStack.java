@@ -1,2 +1,5 @@
-public class MyLinkedListStack {
+java.util.EmptyStackException;
+public class MyLinkedListStack<T> {
+    private MyLinkedList<T> stack;
+
 }
