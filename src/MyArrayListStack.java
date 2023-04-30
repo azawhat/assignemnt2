@@ -7,7 +7,9 @@ public class MyArrayListStack<T> {
         stack = new MyArrayList<T>();
     }
 
-
+    public void push(T element){
+        stack.add(element);
+    }
 
 
 
