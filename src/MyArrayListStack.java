@@ -11,6 +11,9 @@ public class MyArrayListStack<T> {
         stack.add(element);
     }
 
+    public boolean isEmpty(){
+        return stack.isEmpty();
+    }
 
 
 }
