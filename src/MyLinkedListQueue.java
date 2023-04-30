@@ -6,4 +6,9 @@ public class MyLinkedListQueue<E> {
     public MyLinkedListQueue(){
         queue = new MyLinkedList<E>();
     }
+
+    public void enqueue(E element) {
+        queue.add(element);
+    }
+
 }

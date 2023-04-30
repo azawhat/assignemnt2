@@ -120,6 +120,7 @@ public class MyLinkedList<E> {
         return removedElement;
     }
 
+
     public int indexOf(Object o) {
         return 0;
     }
