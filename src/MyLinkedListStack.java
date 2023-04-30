@@ -12,19 +12,22 @@ public class MyLinkedListStack<T> {
     }
 
     public T pop(){
-        if (stack.isEmpty())  {
+        if (isEmpty())  {
             throw new EmptyStackException();
         }
         return stack.remove(0);
     }
 
     public T peek(){
-        if (stack.isEmpty()) {
+        if (isEmpty()) {
             throw new EmptyStackException();
         }
         return stack.get(0);
     }
 
+    public boolean isEmpty(){
+        return stack.isEmpty();
+    }
 
 
 }
