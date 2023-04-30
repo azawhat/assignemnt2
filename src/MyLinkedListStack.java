@@ -1,3 +1,14 @@
+/*
+*   stack - variable type of MyLinkedList
+*   MyLinkedListStack - constructor for the class
+*   push - method in stack, to add   an element at the top of the stack.
+*   pop - removes and returns the top element if the stack
+*   peek - returns the first elements of the stack
+*   isEmpty - to check is stack empty or not
+*   size - to get the size of the stack
+* */
+
+
 import java.util.EmptyStackException;
 
 
