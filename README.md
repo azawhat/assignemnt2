@@ -1,5 +1,5 @@
-# Assignment 2
-This is the second assignment of the Algorithms and Data Structure course.
+# Assignment 2 and Assignment 3
+This is the second and third assignments of the Algorithms and Data Structure course.
 
 
 **_About MyArrayList_** 
@@ -198,6 +198,200 @@ public int size() {
         return size;
     }
 
+```
+
+
+
+## Explanation of the Assignment 3
+
+_Stack Implementation_
+[Link for the Stack Implementation in ArrayList](https://github.com/azawhat/assignemnt2/blob/main/src/MyArrayListStack.java)
+[Link for the Stack Implementation in LinkedList](https://github.com/azawhat/assignemnt2/blob/main/src/MyLinkedListStack.java)
+
+
+**1. New class named MyLinkedListStack for the MyLinkedList and MyArrayListStack for the MyArrayList implementation.**
+
+_Explanation:_ Two new class created.
+```
+public class MyLinkedListStack<T> {}
+
+public class MyArrayListStack<T> {}
+```
+**2. Import the necessary classes**
+
+_Explanation:_ Imported classes at the top of the files 
+
+**3. Variables for these classes**
+
+_Explanation:_ Adding two variables called `stack`
+```
+private MyArrayList<T> stack;
+
+private MyLinkedList<T> stack;
+```
+**4. Constructor for these two classes**
+
+_Explanation:_ Creating two classes that is called `MyArrayListStack` and `MyLinkedListStack`. That are connected with origin file that are called `MyArrayList` and `MyLinkedList` respectively.
+```
+public MyArrayListStack(){
+        stack = new MyArrayList<T>();
+    }
+    
+ public MyLinkedListStack() {
+        stack = new MyLinkedList<>();
+    }
+```
+**5. Push method .**
+
+_Explanation:_ Push method that adds an element to the top of the stack, it looks same in two classes. 
+```
+public void push(T element){
+        stack.add(element);
+    }
+```
+**6. Pop method .**
+
+_Explanation:_ Pop method that removes and returns the top element of the stack
+```
+/* In LinkedList */
+public T pop(){
+        if (isEmpty())  {
+            throw new EmptyStackException();
+        }
+        return stack.remove(0);
+    }
+    
+/* In ArrayList */
+
+public T pop(){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        return stack.remove(stack.size() -1);
+    }
+```
+**7. Peek method .**
+
+_Explanation:_ Peek method that returns the top element of the stack without removing
+```
+/* ArrayList */
+public T peek(){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        return stack.get(stack.size() - 1);
+    }
+    
+/* LinkedList */
+
+public T peek(){
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack.get(0);
+    }
+```
+**8. isEmpty method .**
+
+_Explanation:_ isEmpty method that returns true if the stack is empty or false if it is not. Looks same for both files.
+```
+public boolean isEmpty(){
+        return stack.isEmpty();
+    }
+```
+**9. Size method .**
+
+_Explanation:_ Size method that returns the number of elements in the stack using the size method. Looks same for both classes
+```
+public int size(){
+        return stack.size();
+    }
+```
+
+
+_Queue Implementation_
+[Link for the Queue Implementation in ArrayList](https://github.com/azawhat/assignemnt2/blob/main/src/MyArrayListQueue.java)
+[Link for the Queue Implementation in LinkedList](https://github.com/azawhat/assignemnt2/blob/main/src/MyLinkedListQueue.java)
+
+
+**1. New class named MyLinkedListQueue for the MyLinkedList and MyArrayListQueue for the MyArrayList implementation.**
+
+_Explanation:_ 
+```
+public class MyArrayListQueue<E> {}
+
+public class MyLinkedListQueue<E> {}
+```
+**2. Import the necessary classes**
+
+_Explanation:_ Imported classes at the top of the files 
+
+
+**3. Variables for these classes.**
+
+_Explanation:_  Adding two variables called `queue`
+```
+private MyArrayList<E> queue;
+
+private MyLinkedList<E> queue;
+```
+**4. Constructor for these two classes.**
+
+_Explanation:_ Creating two classes that is called `MyArrayListQueue` and `MyLinkedListQueue`. That are connected with origin file that are called `MyArrayList` and `MyLinkedList` respectively.
+```
+public MyArrayListQueue(){
+        queue = new MyArrayList<E>();
+    }
+    
+public MyLinkedListQueue(){
+        queue = new MyLinkedList<E>();
+    }
+```
+**5. Enqueue method.**
+
+_Explanation:_ Enqueue method that adds an element to the back of the queue. Same for both classes
+```
+public void enqueue(E element){
+        queue.add(element);
+    }
+```
+**6. Dequeue method.**
+
+_Explanation:_ Dequeue method that removes and returns the front element of the queue. Same for both classes.
+```
+public E dequeue(){
+        if(isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return queue.remove(0);
+    }
+```
+**7. Peek method.**
+
+_Explanation:_ Peek method that returns the front element of the queue without removing it. Looks same in both classes.
+```
+public E peek(){
+        if(isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return queue.get(0);
+    }
+```
+**8. isEmpty method .**
+
+_Explanation:_ isEmpty method that returns true if the queue is empty or false if it is not. Looks same for both files.
+```
+public boolean isEmpty(){
+        return queue.isEmpty();
+    }
+```
+**9. Size method .**
+
+_Explanation:_ Size method that returns the number of elements in the queue using the size method. Looks same for both classes
+```
+public int size(){
+        return queue.size();
+    }
 ```
 
 
