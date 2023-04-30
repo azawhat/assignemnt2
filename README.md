@@ -205,7 +205,9 @@ public int size() {
 ## Explanation of the Assignment 3
 
 _Stack Implementation_
+
 [Link for the Stack Implementation in ArrayList](https://github.com/azawhat/assignemnt2/blob/main/src/MyArrayListStack.java)
+
 [Link for the Stack Implementation in LinkedList](https://github.com/azawhat/assignemnt2/blob/main/src/MyLinkedListStack.java)
 
 
@@ -310,7 +312,9 @@ public int size(){
 
 
 _Queue Implementation_
+
 [Link for the Queue Implementation in ArrayList](https://github.com/azawhat/assignemnt2/blob/main/src/MyArrayListQueue.java)
+
 [Link for the Queue Implementation in LinkedList](https://github.com/azawhat/assignemnt2/blob/main/src/MyLinkedListQueue.java)
 
 
