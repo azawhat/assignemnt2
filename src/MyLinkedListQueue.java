@@ -11,4 +11,7 @@ public class MyLinkedListQueue<E> {
         queue.add(element);
     }
 
+    public boolean isEmpty(){
+        return queue.isEmpty();
+    }
 }
