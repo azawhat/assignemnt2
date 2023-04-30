@@ -1,3 +1,14 @@
+/*
+ *   queue - variable type of MyLinkedList
+ *   MyLinkedListQueue - constructor for the class
+ *   enqueue  - method in queue, to add  an element at the end of the queue.
+ *   dequeue - removes and returns the front     element of the queue.
+ *   peek - returns the first elements of the queue.
+ *   isEmpty - to check is queue empty or not
+ *   size - to get the size of the queue
+ * */
+
+
 import java.util.NoSuchElementException;
 
 public class MyLinkedListQueue<E> {
