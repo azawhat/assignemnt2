@@ -25,6 +25,9 @@ public class MyLinkedListQueue<E> {
         return queue.get(0);
     }
 
+    public int size(){
+        return queue.size();
+    }
 
 
     public boolean isEmpty(){
