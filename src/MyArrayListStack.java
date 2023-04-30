@@ -1,4 +1,9 @@
 import java.util.EmptyStackException;
 
-public class MyArrayListStack {
+public class MyArrayListStack<T> {
+    private MyArrayList<T> stack;
+
+
+
+
 }
