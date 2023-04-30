@@ -1,5 +1,9 @@
 import java.util.NoSuchElementException;
 
 public class MyLinkedListQueue<E> {
-    private MyLinkedListQueue<E> queue;
+    private MyLinkedList<E> queue;
+
+    public MyLinkedListQueue(){
+        queue = new MyLinkedList<E>();
+    }
 }
