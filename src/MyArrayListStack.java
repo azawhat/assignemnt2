@@ -33,5 +33,4 @@ public class MyArrayListStack<T> {
         return stack.size();
     }
 
-
 }
